@@ -1,0 +1,27 @@
+{
+  "name": "get-fake-user",
+  "version": "1.0.0",
+  "description": "Random user generation including the following data firstName, lastName, nickname, emailAddres, password.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzmitry-duboyski/get-fake-user.git"
+  },
+  "keywords": [
+    "fake",
+    "user",
+    "testing",
+    "create",
+    "fake",
+    "users"
+  ],
+  "author": "Dima Dub",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dzmitry-duboyski/get-fake-user/issues"
+  },
+  "homepage": "https://github.com/dzmitry-duboyski/get-fake-user#readme"
+}
