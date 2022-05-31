@@ -12,7 +12,7 @@ If you need to automate the registration process for example, you need to create
 The data.js file contains a set of random data that includes first names, last names, and other data. A random first and last name is taken from this file, and an email and password are generated based on them. The generated data is exported as an object.
 
 Example of an exported object: 
-```json
+```javascript
 {
   firstName: 'Arthur',
   lastName: 'Harris',
