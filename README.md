@@ -1,7 +1,7 @@
 
 # get-fake-user 
 
-![downloads](https://img.shields.io/npm/dt/get-fake-user)
+![downloads](https://img.shields.io/npm/dt/get-fake-user) ![](https://img.shields.io/npm/v/get-fake-user) ![](https://img.shields.io/npm/l/get-fake-user) ![](https://img.shields.io/github/last-commit/dzmitry-duboyski/get-fake-user) ![](https://img.shields.io/github/stars/dzmitry-duboyski/get-fake-user?style=social)
 
 ---
 ## Description
