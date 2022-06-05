@@ -17,7 +17,7 @@ Example of an exported object:
   firstName: 'Arthur',
   lastName: 'Harris',
   nickname: 'strong6513903618',
-  emailAddres: 'arthur.harris23248550760@aol.com',
+  emailAddress: 'arthur.harris23248550760@aol.com',
   password: 'Arthur*73235629514'
 }
 ```
@@ -31,15 +31,56 @@ npm install get-fake-user
 ## Usage
 
 ```javascript
-const user = require('get-fake-user')
+const getfakeUser = require('get-fake-user')
 
-console.log(user)
-console.log(user.firstName)
-console.log(user.lastName)
-console.log(user.nickname)
-console.log(user.emailAddres)
-console.log(user.password)
+console.log(getfakeUser())
 ```
+```sh
+// console output
+{
+  firstName: 'Lucas',
+  lastName: 'James',
+  nickname: 'hot2875558',
+  emailAddress: 'lucas.james9818372@yahoo.com',
+  password: 'Lucas)9958004'
+}
+```
+
+To get multiple users, when calling `getFakeUser()` specify an object with the `count` field as a parameter, specify the required number of users in the `count` value. In this case, an array with the specified number of users will be returned.
+
+```javascript
+const getfakeUser = require('get-fake-user')
+
+console.log(getfakeUser({count:3}))
+```
+
+```sh
+// console output
+[
+  {
+    firstName: 'Edward',
+    lastName: 'Bryant',
+    nickname: 'strong2917039',
+    emailAddress: 'edward.bryant5459135@outlook.com',
+    password: 'Edward_224314'
+  },
+  {
+    firstName: 'Alfie',
+    lastName: 'Miller',
+    nickname: 'fast7843971',
+    emailAddress: 'alfie.miller5830183@yahoo.com',
+    password: 'Alfie*6656289'
+  },
+  {
+    firstName: 'Corey',
+    lastName: 'Morgan',
+    nickname: 'strong461218',
+    emailAddress: 'corey.morgan1531318@aol.com',
+    password: 'Corey-47036'
+  }
+]
+```
+
 
 ## [Demo](https://replit.com/@dzmitry-duboysk/Demo-get-fake-user?v=1)
 

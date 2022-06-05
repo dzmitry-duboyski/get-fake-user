@@ -1,36 +1,58 @@
 const data = require('./data')
+const { getRandomElement, getRandomNumber } = require('./utils')
 
-const createNewUser = () => {
-
-  const getRandomElement = (arr = []) => {
-    const min = 0
-    const max = arr.length - 1
-
-    let randIndex = Math.floor(min + Math.random() * (max + 1 - min))
-    const randomeElement = arr[randIndex]
-
-    return randomeElement
-  }
-
-  const getRandomNumber = (min = 1, max = 100000000000) => {
-    return Math.floor(Math.random() * (max - min) + min);
-  }
- 
-  const firstName = getRandomElement(data.firstName)
-  const lastName = getRandomElement(data.lastName)
-  const nickname = `${getRandomElement(data.nicknamePrefix)}${getRandomNumber()}`
-  const emailAddres = `${firstName.toLowerCase()}.${lastName.toLowerCase()}${getRandomNumber()}@${getRandomElement(data.mailDomain)}`
-  const password = `${firstName}${getRandomElement(data.specialSymbols)}${getRandomNumber()}`
-
-  const newUser = {
+/**
+ * Getting one random user
+ * 
+ * @returns {Object} An object containing the data of a random user. 
+ * The object contains the following fields: first name, last name, nickname, email address, password
+ */
+const getRandomeUser = () => {
+  const firstName = getRandomElement(data.firstNameArray)
+  const lastName = getRandomElement(data.lastNameArray)
+  const nickname = `${getRandomElement(data.nicknamePrefixArray)}${getRandomNumber()}`
+  const emailDomain = getRandomElement(data.mailDomainArray)
+  const emailName = `${firstName.toLowerCase()}.${lastName.toLowerCase()}${getRandomNumber()}`
+  const emailAddress = `${emailName}@${emailDomain}`
+  const password = `${firstName}${getRandomElement(data.specialSymbolsArray)}${getRandomNumber()}`
+  
+  const randomeUser = {
     firstName: firstName,
     lastName: lastName,
     nickname: nickname,
-    emailAddres: emailAddres,
+    emailAddress: emailAddress,
     password: password,
   }
-
-  return newUser  
+  
+  return randomeUser
 }
 
-module.exports = createNewUser()
+/**
+ * Default user creation settings
+ */
+const defaultParam = {
+  count: 1
+}
+
+/**
+ * Creating the required number of users.
+ * 
+ * @param {Object} param - An object containing settings for creating users. param.count - how many users need to be created
+ * @returns {Object|Array} If a single user is created, it will be returned as an object. If you need to create multiple users, an array containing objects with users will be returned.
+ */
+const getRandomeUsers = (param = defaultParam) => {
+  let users = []
+
+  if ( param === defaultParam) {
+    users = getRandomeUser()
+  } else {
+    const count = param.count
+    for(i = 1; i <= count; i++) {
+      users.push(getRandomeUser())
+    }
+  }
+
+  return users
+}
+
+module.exports = getRandomeUsers

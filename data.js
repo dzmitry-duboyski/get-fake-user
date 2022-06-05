@@ -1,5 +1,8 @@
+/**
+ * Here is the data that is used when creating the user.
+ */
 module.exports = {
-  'firstName': [
+  'firstNameArray': [
     'Abraham',
     'Adam',
     'Adrian',
@@ -132,7 +135,7 @@ module.exports = {
     'Winston',
     'Zachary'
   ],
-  'lastName': [
+  'lastNameArray': [
     'Smith',
     'Johnson',
     'Williams',
@@ -234,12 +237,12 @@ module.exports = {
     'Diaz',
     'Hayes'
   ],
-  'mailDomain': [
+  'mailDomainArray': [
     'gmail.com',
     'outlook.com',
     'yahoo.com',
     'aol.com'
   ],
-  'specialSymbols': ['!','@','#','$','%','^','&','*','(',')','-','_','='],
-  'nicknamePrefix':['super','puper','hot','sweetie','lazy','fast','strong']
+  'specialSymbolsArray': ['!','@','#','$','%','^','&','*','(',')','-','_','='],
+  'nicknamePrefixArray':['super','puper','hot','sweetie','lazy','fast','strong']
 }
