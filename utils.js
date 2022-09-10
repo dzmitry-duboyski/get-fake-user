@@ -26,4 +26,85 @@ const getRandomNumber = (min = 10000, max = 10000000) => {
   return randomeNumber
 }
 
-module.exports = { getRandomElement, getRandomNumber }
+const dataEnCommon = require('./data/en/data-en-common')
+const dataEnMen = require('./data/en/data-en-men')
+const dataEnWoman = require('./data/en/data-en-woman')
+
+const getData = (settings = defaultSettings) => {
+  let data = {}
+  const isEnLanguage = settings.language.toLowerCase() === 'en'
+  if( isEnLanguage ) {
+    data.common = dataEnCommon
+    data.men = dataEnMen
+    data.woman = dataEnWoman
+  }
+  return data
+}
+
+
+const checkSettings = (settings, defaultSettings) => {
+  const correctGenderArr = ['men','woman','mix']
+  const correctLanguageArr = ['en']
+
+  const isGenderExist = settings.hasOwnProperty('gender')
+  let isGenderIncorrect
+  if ( isGenderExist ) {
+    settings.gender = String(settings.gender).toLowerCase()
+    isGenderIncorrect = !correctGenderArr.includes(settings.gender)
+  }
+
+  if( isGenderIncorrect ) {
+    console.log('\x1b[33m', 'Package "get-fake-user" - You have specified an incorrect "gender", gender will be specified randomly(gender=mix).'+ '\x1b[0m')
+  }
+
+  if ( !isGenderExist || isGenderIncorrect) {
+    settings.gender = defaultSettings.gender    
+  }
+
+  const isLanguagetExist = settings.hasOwnProperty('language')
+  let isLanguageIncorrect
+  if( isLanguagetExist ) {
+    settings.language = String(settings.language).toLowerCase()
+    isLanguageIncorrect = !correctLanguageArr.includes(settings.language)
+  }
+
+  if( isLanguageIncorrect ) {
+    console.log('\x1b[33m', 'Package "get-fake-user" - You have specified an incorrect "language", language will be specified "en".'+ '\x1b[0m')
+  }
+
+  if ( !isLanguagetExist || isLanguageIncorrect) {
+    settings.language = defaultSettings.language    
+  }
+
+  const isCountExist = settings.hasOwnProperty('count')
+  let isCountIncorrect
+  if( isCountExist ) {
+    let isCountNaN = Number.isNaN(Number(settings.count))
+    isCountIncorrect = isCountNaN
+    if(!isCountIncorrect) {
+      settings.count = Number(settings.count)
+    }
+  }
+
+  if ( isCountIncorrect ) {
+    console.log('\x1b[33m', 'Package "get-fake-user" - You have specified an incorrect "count", count will be specified 1.'+ '\x1b[0m')
+  }
+
+  if( !isCountExist || isCountIncorrect) {
+    settings.count = defaultSettings.count
+  }
+
+  return settings
+}
+
+getRandomGender = () => {
+  let randomNumberStr = Math.random().toString()
+  let lastRandomeNumber = Number(randomNumberStr[randomNumberStr.length - 1])
+  if( lastRandomeNumber >= 5 ) {
+    return 'men'
+  } else {
+    return'woman'
+  }
+}
+
+module.exports = { getRandomElement, getRandomNumber, getData, checkSettings, getRandomGender }
