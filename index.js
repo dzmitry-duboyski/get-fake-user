@@ -11,6 +11,7 @@ const getRandomeUser = (settings) => {
   let data = getData(settings)
   let firstName
   let lastName
+  let gender
   let nickname
   let emailDomain
   let emailName
@@ -20,11 +21,13 @@ const getRandomeUser = (settings) => {
   const getMaleData = () => {
     firstName = getRandomElement(data.male.firstNameArray)
     lastName = getRandomElement(data.male.lastNameArray)
+    gender = 'male'
   }
 
   const getFemaleData = () => {
     firstName = getRandomElement(data.female.firstNameArray)
     lastName = getRandomElement(data.female.lastNameArray)
+    gender = 'female'
   }
 
   const getMixData = () => {
@@ -59,6 +62,7 @@ const getRandomeUser = (settings) => {
   const randomeUser = {
     firstName: firstName,
     lastName: lastName,
+    gender: gender,
     nickname: nickname,
     emailAddress: emailAddress,
     password: password,
