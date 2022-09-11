@@ -93,7 +93,7 @@ When creating a user, you can specify the required gender for users using the `g
 ```javascript
 const getfakeUser = require('get-fake-user')
 
-console.log(getfakeUser({count:2, gender: 'woman'}))
+console.log(getfakeUser({count:2, gender: 'female'}))
 ```
 
 
