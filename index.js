@@ -17,31 +17,31 @@ const getRandomeUser = (settings) => {
   let emailAddress
   let password
 
-  const getMenData = () => {
-    firstName = getRandomElement(data.men.firstNameArray)
-    lastName = getRandomElement(data.men.lastNameArray)
+  const getMaleData = () => {
+    firstName = getRandomElement(data.male.firstNameArray)
+    lastName = getRandomElement(data.male.lastNameArray)
   }
 
-  const getWomanData = () => {
-    firstName = getRandomElement(data.woman.firstNameArray)
-    lastName = getRandomElement(data.woman.lastNameArray)
+  const getFemaleData = () => {
+    firstName = getRandomElement(data.female.firstNameArray)
+    lastName = getRandomElement(data.female.lastNameArray)
   }
 
   const getMixData = () => {
     const randomGender = getRandomGender()
-    if(randomGender === 'men') {
-      getMenData()
+    if(randomGender === 'male') {
+      getMaleData()
     } else {
-      getWomanData()
+      getFemaleData()
     }
   }
 
   switch(settings.gender){
-    case 'men':
-      getMenData();
+    case 'male':
+      getMaleData();
       break;
-    case 'woman':
-      getWomanData();
+    case 'female':
+      getFemaleData();
       break;
     case 'mix':
       getMixData();
@@ -72,7 +72,7 @@ const getRandomeUser = (settings) => {
  * 
  * @settings {Object} settings - An object containing settings for creating users. 
  * settings.count - how many users need to be created, default value "1".
- * settings.gender - gender of created users ("men","woman","mix"), default value "mix".
+ * settings.gender - gender of created users ("male","female","mix"), default value "mix".
  * settings.language - language for first and last name, default value "en".
  * 
  * @returns {Object|Array} If a single user is created, it will be returned as an object. If you need to create multiple users, an array containing objects with users will be returned.

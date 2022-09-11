@@ -27,23 +27,23 @@ const getRandomNumber = (min = 10000, max = 10000000) => {
 }
 
 const dataEnCommon = require('./data/en/data-en-common')
-const dataEnMen = require('./data/en/data-en-men')
-const dataEnWoman = require('./data/en/data-en-woman')
+const dataEnMale = require('./data/en/data-en-male')
+const dataEnFemale = require('./data/en/data-en-female')
 
 const getData = (settings = defaultSettings) => {
   let data = {}
   const isEnLanguage = settings.language.toLowerCase() === 'en'
   if( isEnLanguage ) {
     data.common = dataEnCommon
-    data.men = dataEnMen
-    data.woman = dataEnWoman
+    data.male = dataEnMale
+    data.female = dataEnFemale
   }
   return data
 }
 
 
 const checkSettings = (settings, defaultSettings) => {
-  const correctGenderArr = ['men','woman','mix']
+  const correctGenderArr = ['male','female','mix']
   const correctLanguageArr = ['en']
 
   const isGenderExist = settings.hasOwnProperty('gender')
@@ -101,9 +101,9 @@ getRandomGender = () => {
   let randomNumberStr = Math.random().toString()
   let lastRandomeNumber = Number(randomNumberStr[randomNumberStr.length - 1])
   if( lastRandomeNumber >= 5 ) {
-    return 'men'
+    return 'male'
   } else {
-    return'woman'
+    return 'female'
   }
 }
 
