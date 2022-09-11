@@ -61,9 +61,9 @@ const checkSettings = (settings, defaultSettings) => {
     settings.gender = defaultSettings.gender    
   }
 
-  const isLanguagetExist = settings.hasOwnProperty('language')
+  const isLanguageExist = settings.hasOwnProperty('language')
   let isLanguageIncorrect
-  if( isLanguagetExist ) {
+  if( isLanguageExist ) {
     settings.language = String(settings.language).toLowerCase()
     isLanguageIncorrect = !correctLanguageArr.includes(settings.language)
   }
@@ -72,7 +72,7 @@ const checkSettings = (settings, defaultSettings) => {
     console.log('\x1b[33m', 'Package "get-fake-user" - You have specified an incorrect "language", language will be specified "en".'+ '\x1b[0m')
   }
 
-  if ( !isLanguagetExist || isLanguageIncorrect) {
+  if ( !isLanguageExist || isLanguageIncorrect) {
     settings.language = defaultSettings.language    
   }
 
