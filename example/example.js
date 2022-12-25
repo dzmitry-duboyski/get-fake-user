@@ -9,6 +9,7 @@ const getfakeUser = require('../index')
 //   gender: "mix",
 // }
 
+
 console.log('First example:')
 console.log(getfakeUser())
 
@@ -17,3 +18,6 @@ console.log(getfakeUser({count: 3, gender: 'male'}))
 
 console.log('Third example:')
 console.log(getfakeUser({count: 1, language: 'en'}))
+
+console.log('Fourth example:')
+console.log(getfakeUser({count: 1, language: 'ru'}))

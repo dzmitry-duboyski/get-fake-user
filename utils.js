@@ -30,21 +30,38 @@ const dataEnCommon = require('./data/en/data-en-common')
 const dataEnMale = require('./data/en/data-en-male')
 const dataEnFemale = require('./data/en/data-en-female')
 
+const dataRuCommon = require('./data/ru/data-ru-common')
+const dataRuMale = require('./data/ru/data-ru-male')
+const dataRuFemale = require('./data/ru/data-ru-female')
+
 const getData = (settings = defaultSettings) => {
   let data = {}
   const isEnLanguage = settings.language.toLowerCase() === 'en'
+  const isRuLanguage = settings.language.toLowerCase() === 'ru'
+ console.log('lang=',settings.language.toLowerCase())
+ console.log('settings=',settings)
+
+
   if( isEnLanguage ) {
     data.common = dataEnCommon
     data.male = dataEnMale
     data.female = dataEnFemale
+  } else if( isRuLanguage ) {
+    data.common = dataRuCommon
+    data.male = dataRuMale
+    data.female = dataRuFemale
   }
+
   return data
 }
 
 
 const checkSettings = (settings, defaultSettings) => {
+
+  // fixme (correctGenderArr and correctLanguageArr is const)
+  // need a separate file
   const correctGenderArr = ['male','female','mix']
-  const correctLanguageArr = ['en']
+  const correctLanguageArr = ['en','ru']
 
   const isGenderExist = settings.hasOwnProperty('gender')
   let isGenderIncorrect

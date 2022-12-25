@@ -1,8 +1,17 @@
 const { getRandomElement, getRandomNumber, getData, checkSettings, getRandomGender } = require('./utils')
 const defaultSettings = require('./getDefaultSettings')()
+const { getTranslite } = require('./getTranslite')
 
 /**
  * Getting one random user
+ * 
+ * @param {settings} - user creation settings
+ * @example 
+ *  const settings = {
+ *   count: 1,
+ *   gender: "mix",
+ *   language: "en"
+ * }
  * 
  * @returns {Object} An object containing the data of a random user. 
  * The object contains the following fields: first name, last name, nickname, email address, password
@@ -56,8 +65,17 @@ const getRandomeUser = (settings) => {
   nickname = `${getRandomElement(data.common.nicknamePrefixArray)}${getRandomNumber()}`
   emailDomain = getRandomElement(data.common.mailDomainArray)
   emailName = `${firstName.toLowerCase()}.${lastName.toLowerCase()}${getRandomNumber()}`
-  emailAddress = `${emailName}@${emailDomain}`
-  password = `${firstName}${getRandomElement(data.specialSymbolsArray)}${getRandomNumber()}`
+
+  // fixme ( hardcode for 'en', 'ru' language)
+  if(settings.language == 'en') {
+    emailAddress = `${emailName}@${emailDomain}`
+    password = `${firstName}${getRandomElement(data.common.specialSymbolsArray)}${getRandomNumber()}`
+  } 
+
+  if(settings.language == 'ru') {
+    emailAddress = `${getTranslite(emailName)}@${emailDomain}`
+    password = `${getTranslite(firstName)}${getRandomElement(data.common.specialSymbolsArray)}${getRandomNumber()}`
+  }
 
   const randomeUser = {
     firstName: firstName,
