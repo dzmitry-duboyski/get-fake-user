@@ -38,9 +38,6 @@ const getData = (settings = defaultSettings) => {
   let data = {}
   const isEnLanguage = settings.language.toLowerCase() === 'en'
   const isRuLanguage = settings.language.toLowerCase() === 'ru'
- console.log('lang=',settings.language.toLowerCase())
- console.log('settings=',settings)
-
 
   if( isEnLanguage ) {
     data.common = dataEnCommon

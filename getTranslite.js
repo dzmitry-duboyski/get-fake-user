@@ -89,7 +89,7 @@ output: 'en'
 }
 
 // fixme (not used "options")
-const getTranslite = (str, options = defaultTransliteOption) => {
+const getTranslite = (str, options = defaultTransliteOptions) => {
   const newStr = [...str].map(element => {
     const isTransliteAvailable = ruTranslite.toEn.hasOwnProperty(`${element}`)
     if(isTransliteAvailable) {
