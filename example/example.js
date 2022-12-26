@@ -20,4 +20,4 @@ console.log('Third example:')
 console.log(getfakeUser({count: 1, language: 'en'}))
 
 console.log('Fourth example:')
-console.log(getfakeUser({count: 1, language: 'ru'}))
+console.log(getfakeUser({language: 'ru'}))

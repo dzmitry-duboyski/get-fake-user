@@ -13,6 +13,8 @@ If you need to automate the registration process for example, you need to create
 The `/data` folder contains a set of random data that includes first names, last names, and other data. A random first and last name is taken from files in this folder, and an email and password are generated based on them. The generated data is exported as an object in array.
 When a single user is created, it is returned as an object. When creating multiple users, user objects are returned in an array.
 
+Supports English and Russian for fields 'firstName', 'lastName'.
+
 Example of an exported data(one user): 
 ```javascript
 {
@@ -49,8 +51,10 @@ console.log(getfakeUser())
   password: 'Alfieundefined5009314'
 }
 ```
-
+### `count`
 To get multiple users, when calling `getFakeUser()` specify an object with the `count` field as a parameter, specify the required number of users in the `count` value. In this case, an array with the specified number of users will be returned.
+
+
 
 ```javascript
 const getfakeUser = require('get-fake-user')
@@ -87,7 +91,7 @@ console.log(getfakeUser({count:3}))
   }
 ]
 ```
-
+### `gender`
 When creating a user, you can specify the required gender for users using the `gender` parameter.  Use the following values `male`, `female`, `mix`. The `mix` parameter can be omitted, it is set by default if the `gender` parameter is missing. Thus, if the `gender` parameter is not manually specified by you, then the gender of the users will be randomly selected.
 
 ```javascript
@@ -115,6 +119,28 @@ console.log(getfakeUser({count:2, gender: 'female'}))
     nickname: 'lazy3778840',
     emailAddress: 'carol.sykes9959462@gmail.com',
     password: 'Carolundefined7241265'
+  }
+]
+```
+
+### `language`
+With the `language` setting, you can choose in which language fields such as `firstName` and `lastName`.By default `language=en`. Supported languages: English, Russian. To select a language, enter it in the following format `language: 'en'` or `language: 'ru'`.
+`language: 'en'` is optional, as it is the default.
+```javascript
+const getfakeUser = require('get-fake-user')
+
+console.log(getfakeUser({language: 'ru'}))
+```
+```javascript
+// console output
+[
+  {
+    firstName: 'Владислав',
+    lastName: 'Виноградов',
+    gender: 'male',
+    nickname: 'strong3297577',
+    emailAddress: 'vladislav.vinogradov@aol.com',
+    password: 'Vladislav#6393212'
   }
 ]
 ```
