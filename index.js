@@ -67,14 +67,19 @@ const getRandomeUser = (settings) => {
   emailName = `${firstName.toLowerCase()}.${lastName.toLowerCase()}${getRandomNumber()}`
 
   // fixme ( hardcode for 'en', 'ru' language)
+  // fixme: add switch case
   if(settings.language == 'en') {
     emailAddress = `${emailName}@${emailDomain}`
     password = `${firstName}${getRandomElement(data.common.specialSymbolsArray)}${getRandomNumber()}`
-  } 
+  } else {
 
-  if(settings.language == 'ru') {
-    emailAddress = `${getTranslite(emailName)}@${emailDomain}`
-    password = `${getTranslite(firstName)}${getRandomElement(data.common.specialSymbolsArray)}${getRandomNumber()}`
+    const transliteOptions = {
+      input: settings.language,
+      output: 'en'
+    }
+
+    emailAddress = `${getTranslite(emailName, transliteOptions)}@${emailDomain}`
+    password = `${getTranslite(firstName, transliteOptions)}${getRandomElement(data.common.specialSymbolsArray)}${getRandomNumber()}`
   }
 
   const randomeUser = {
