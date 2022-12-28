@@ -39,6 +39,7 @@ const getData = (settings = defaultSettings) => {
   const isEnLanguage = settings.language.toLowerCase() === 'en'
   const isRuLanguage = settings.language.toLowerCase() === 'ru'
 
+  // fixme: switch case ;(
   if( isEnLanguage ) {
     data.common = dataEnCommon
     data.male = dataEnMale
