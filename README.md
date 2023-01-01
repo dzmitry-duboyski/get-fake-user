@@ -23,7 +23,7 @@ Example of an exported data(one user):
   gender: 'male',
   nickname: 'strong9173452',
   emailAddress: 'alfie.macey5713177@yahoo.com',
-  password: 'Alfieundefined5009314'
+  password: 'Alfie$5009314'
 }
 ```
 
@@ -48,7 +48,7 @@ console.log(getfakeUser())
   gender: 'male',
   nickname: 'strong9173452',
   emailAddress: 'alfie.macey5713177@yahoo.com',
-  password: 'Alfieundefined5009314'
+  password: 'Alfie$5009314'
 }
 ```
 ### `count`
@@ -71,7 +71,7 @@ console.log(getfakeUser({count:3}))
     gender: 'male',
     nickname: 'fast746322',
     emailAddress: 'brian.bargeman6495334@aol.com',
-    password: 'Brianundefined602241'
+    password: 'Brian#602241'
   },
   {
     firstName: 'Terence',
@@ -79,7 +79,7 @@ console.log(getfakeUser({count:3}))
     gender: 'male',
     nickname: 'sweetie4996015',
     emailAddress: 'terence.birch9865994@gmail.com',
-    password: 'Terenceundefined2515067'
+    password: 'Terence@2515067'
   },
   {
     firstName: 'Cheryl',
@@ -87,7 +87,7 @@ console.log(getfakeUser({count:3}))
     gender: 'female',
     nickname: 'fast9219228',
     emailAddress: 'cheryl.samuels7309146@yahoo.com',
-    password: 'Cherylundefined7425514'
+    password: 'Cheryl$7425514'
   }
 ]
 ```
@@ -110,7 +110,7 @@ console.log(getfakeUser({count:2, gender: 'female'}))
     gender: 'female',
     nickname: 'hot2586687',
     emailAddress: 'whitney.gustman9004751@gmail.com',
-    password: 'Whitneyundefined5540391'
+    password: 'Whitney)5540391'
   },
   {
     firstName: 'Carol',
@@ -118,7 +118,7 @@ console.log(getfakeUser({count:2, gender: 'female'}))
     gender: 'female',
     nickname: 'lazy3778840',
     emailAddress: 'carol.sykes9959462@gmail.com',
-    password: 'Carolundefined7241265'
+    password: 'Carol$7241265'
   }
 ]
 ```
