@@ -13,7 +13,7 @@ If you need to automate the registration process for example, you need to create
 The `/data` folder contains a set of random data that includes first names, last names, and other data. A random first and last name is taken from files in this folder, and an email and password are generated based on them. The generated data is exported as an object in array.
 When a single user is created, it is returned as an object. When creating multiple users, user objects are returned in an array.
 
-Supports English and Russian for fields 'firstName', 'lastName'.
+English, Ukrainian and Russian languages are supported for the "firstName", "lastName" fields.
 
 Example of an exported data(one user): 
 ```javascript
@@ -124,7 +124,7 @@ console.log(getfakeUser({count:2, gender: 'female'}))
 ```
 
 ### `language`
-With the `language` setting, you can choose in which language fields such as `firstName` and `lastName`.By default `language=en`. Supported languages: English, Russian. To select a language, enter it in the following format `language: 'en'` or `language: 'ru'`.
+With the `language` setting, you can choose in which language fields such as `firstName` and `lastName`. By default `language=en`. Supported languages: English, Ukrainian , Russian. To select a language, enter it in the following format `language: 'en'` or `language: 'uk'` or `language: 'ru'`.
 `language: 'en'` is optional, as it is the default.
 ```javascript
 const getfakeUser = require('get-fake-user')
