@@ -51,6 +51,17 @@ console.log(getfakeUser())
   password: 'Alfie$5009314'
 }
 ```
+## Additional parameters
+
+You can specify additional options to customize the created users.
+
+| Name | Description | Default value | Examples |
+| --- | --- | --- | --- |
+| `count` | Number of users. | `1` | `getfakeUser({ count:10 })` |
+| `gender` | Gender of users.<br/><br/>**Supported values:**  `male`, `female`, `mix`.<br/><br/>`male` - created users will be male<br/>`female` - created users will be female <br/>`mix` - created users will be of random sex (`male` or `female`) | `mix` | `getfakeUser({ gender: 'female' })` |
+| `language` | Supported languages: English, Ukrainian, Russian. the specified language only affects the `firstName` and `lastName` fields.<br/><br/>**Supported values:** `en`, `uk`, `ru`.<br/><br/>`en` - English<br/>`uk` - Ukrainian<br/>`ru` - Russian | `en` | `getfakeUser({ language: 'uk' })` |
+
+
 ### `count`
 To get multiple users, when calling `getFakeUser()` specify an object with the `count` field as a parameter, specify the required number of users in the `count` value. In this case, an array with the specified number of users will be returned.
 
@@ -124,7 +135,7 @@ console.log(getfakeUser({count:2, gender: 'female'}))
 ```
 
 ### `language`
-With the `language` setting, you can choose in which language fields such as `firstName` and `lastName`. By default `language=en`. Supported languages: English, Ukrainian , Russian. To select a language, enter it in the following format `language: 'en'` or `language: 'uk'` or `language: 'ru'`.
+With the `language` setting, you can choose in which language fields such as `firstName` and `lastName`. By default `language=en`. Supported languages: English, Ukrainian, Russian. To select a language, enter it in the following format `language: 'en'` or `language: 'uk'` or `language: 'ru'`.
 `language: 'en'` is optional, as it is the default.
 ```javascript
 const getfakeUser = require('get-fake-user')
