@@ -3,7 +3,7 @@
  * "Лук'янова" => "Lukyanova"
 */
 
-const ruTranslite = {
+const ukTranslite = {
   toEn: {
     "А":"A",
     "Б":"B",

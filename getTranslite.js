@@ -1,5 +1,6 @@
 
 const { ruTranslite } = require('./data/ru/data-ru-translite')
+const { ukTranslite } = require('./data/uk/data-uk-translite')
 
 const defaultTransliteOptions = {
   input: 'ru',
@@ -20,8 +21,10 @@ const getTranslite = (str, transliteOptions = defaultTransliteOptions) => {
 
   switch(inputLanguage) {
     case 'ru':
-      // code block
       activeTranslite = ruTranslite
+      break;
+    case 'uk':
+      activeTranslite = ukTranslite
       break;
 /*
     case 'es':

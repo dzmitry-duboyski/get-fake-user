@@ -21,3 +21,6 @@ console.log(getfakeUser({count: 1, language: 'en'}))
 
 console.log('Fourth example:')
 console.log(getfakeUser({language: 'ru'}))
+
+console.log('Fifth example:')
+console.log(getfakeUser({language: 'uk'}))
