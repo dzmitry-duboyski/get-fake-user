@@ -36,9 +36,9 @@ npm install get-fake-user
 ## Usage
 
 ```javascript
-const getfakeUser = require('get-fake-user')
+const getFakeUser = require('get-fake-user')
 
-console.log(getfakeUser())
+console.log(getFakeUser())
 ```
 ```javascript
 // console output
@@ -57,9 +57,9 @@ You can specify additional options to customize the created users.
 
 | Name | Description | Default value | Examples |
 | --- | --- | --- | --- |
-| `count` | Number of users. | `1` | `getfakeUser({ count:10 })` |
-| `gender` | Gender of users.<br/><br/>**Supported values:**  `male`, `female`, `mix`.<br/><br/>`male` - created users will be male<br/>`female` - created users will be female <br/>`mix` - created users will be of random sex (`male` or `female`) | `mix` | `getfakeUser({ gender: 'female' })` |
-| `language` | Supported languages: English, Ukrainian, Russian. the specified language only affects the `firstName` and `lastName` fields.<br/><br/>**Supported values:** `en`, `uk`, `ru`.<br/><br/>`en` - English<br/>`uk` - Ukrainian<br/>`ru` - Russian | `en` | `getfakeUser({ language: 'uk' })` |
+| `count` | Number of users. | `1` | `getFakeUser({ count:10 })` |
+| `gender` | Gender of users.<br/><br/>**Supported values:**  `male`, `female`, `mix`.<br/><br/>`male` - created users will be male<br/>`female` - created users will be female <br/>`mix` - created users will be of random sex (`male` or `female`) | `mix` | `getFakeUser({ gender: 'female' })` |
+| `language` | Supported languages: English, Ukrainian, Russian. the specified language only affects the `firstName` and `lastName` fields.<br/><br/>**Supported values:** `en`, `uk`, `ru`.<br/><br/>`en` - English<br/>`uk` - Ukrainian<br/>`ru` - Russian | `en` | `getFakeUser({ language: 'uk' })` |
 
 
 ### `count`
@@ -68,9 +68,9 @@ To get multiple users, when calling `getFakeUser()` specify an object with the `
 
 
 ```javascript
-const getfakeUser = require('get-fake-user')
+const getFakeUser = require('get-fake-user')
 
-console.log(getfakeUser({count:3}))
+console.log(getFakeUser({count:3}))
 ```
 
 ```javascript
@@ -108,7 +108,7 @@ When creating a user, you can specify the required gender for users using the `g
 ```javascript
 const getfakeUser = require('get-fake-user')
 
-console.log(getfakeUser({count:2, gender: 'female'}))
+console.log(getFakeUser({count:2, gender: 'female'}))
 ```
 
 
@@ -140,7 +140,7 @@ With the `language` setting, you can choose in which language fields such as `fi
 ```javascript
 const getfakeUser = require('get-fake-user')
 
-console.log(getfakeUser({language: 'ru'}))
+console.log(getFakeUser({language: 'ru'}))
 ```
 ```javascript
 // console output
