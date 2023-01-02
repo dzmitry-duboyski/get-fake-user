@@ -156,7 +156,7 @@ console.log(getFakeUser({language: 'ru'}))
 ]
 ```
 
-## [Demo](https://replit.com/@dzmitry-duboysk/Demo-get-fake-user?v=1)
+## [Demo](https://replit.com/@dzmitry-duboysk/get-fake-user)
 
 ## License
 
