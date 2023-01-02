@@ -40,23 +40,26 @@ const dataUkFemale = require('./data/uk/data-uk-female')
 
 const getData = (settings = defaultSettings) => {
   let data = {}
-  const isEnLanguage = settings.language.toLowerCase() === 'en'
-  const isRuLanguage = settings.language.toLowerCase() === 'ru'
-  const isUkLanguage = settings.language.toLowerCase() === 'uk'
+  const language = settings.language.toLowerCase()
 
-  // fixme: switch case ;((((
-  if( isEnLanguage ) {
-    data.common = dataEnCommon
-    data.male = dataEnMale
-    data.female = dataEnFemale
-  } else if( isRuLanguage ) {
-    data.common = dataRuCommon
-    data.male = dataRuMale
-    data.female = dataRuFemale
-  } else if( isUkLanguage ) {
-    data.common = dataUkCommon
-    data.male = dataUkMale
-    data.female = dataUkFemale
+  switch(language) {
+    case'en':
+      data.common = dataEnCommon
+      data.male = dataEnMale
+      data.female = dataEnFemale
+      break;
+
+    case'ru':
+      data.common = dataRuCommon
+      data.male = dataRuMale
+      data.female = dataRuFemale
+      break;
+
+    case'uk':
+      data.common = dataUkCommon
+      data.male = dataUkMale
+      data.female = dataUkFemale
+      break;
   }
 
   return data
@@ -65,7 +68,7 @@ const getData = (settings = defaultSettings) => {
 
 const checkSettings = (settings, defaultSettings) => {
 
-  // fixme (correctGenderArr and correctLanguageArr is const)
+  // FixMe (correctGenderArr and correctLanguageArr is const)
   // need a separate file
   const correctGenderArr = ['male','female','mix']
   const correctLanguageArr = ['en','ru','uk']

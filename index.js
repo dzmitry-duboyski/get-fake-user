@@ -102,7 +102,9 @@ const getRandomeUser = (settings) => {
  * settings.gender - gender of created users ("male","female","mix"), default value "mix".
  * settings.language - language for first and last name, default value "en".
  * 
- * @returns {Object|Array} If a single user is created, it will be returned as an object. If you need to create multiple users, an array containing objects with users will be returned.
+ * @returns {Object|Array} If a single user is created, it will be returned as an object.
+ * If you need to create multiple users, an array containing objects with users will be returned.
+ * 
  */
 const getRandomeUsers = (settings = defaultSettings) => {
   let users = []
