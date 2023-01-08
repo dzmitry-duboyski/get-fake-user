@@ -13,7 +13,7 @@ If you need to automate the registration process for example, you need to create
 The `/data` folder contains a set of random data that includes first names, last names, and other data. A random first and last name is taken from files in this folder, and an email and password are generated based on them. The generated data is exported as an object in array.
 When a single user is created, it is returned as an object. When creating multiple users, user objects are returned in an array.
 
-English, Ukrainian and Russian languages are supported for the "firstName", "lastName" fields.
+English, Spanish, Ukrainian and Russian languages are supported for the "firstName", "lastName" fields.
 
 Example of an exported data(one user): 
 ```javascript
@@ -59,7 +59,7 @@ You can specify additional options to customize the created users.
 | --- | --- | --- | --- |
 | `count` | Number of users. | `1` | `getFakeUser({ count:10 })` |
 | `gender` | Gender of users.<br/><br/>**Supported values:**  `male`, `female`, `mix`.<br/><br/>`male` - created users will be male<br/>`female` - created users will be female <br/>`mix` - created users will be of random sex (`male` or `female`) | `mix` | `getFakeUser({ gender: 'female' })` |
-| `language` | Supported languages: English, Ukrainian, Russian. the specified language only affects the `firstName` and `lastName` fields.<br/><br/>**Supported values:** `en`, `uk`, `ru`.<br/><br/>`en` - English<br/>`uk` - Ukrainian<br/>`ru` - Russian | `en` | `getFakeUser({ language: 'uk' })` |
+| `language` | Supported languages: English, Ukrainian, Russian. the specified language only affects the `firstName` and `lastName` fields.<br/><br/>**Supported values:** `en`,`es`, `uk`, `ru`.<br/><br/>`en` - English<br/>`es` - Spanish<br/>`uk` - Ukrainian<br/>`ru` - Russian | `en` | `getFakeUser({ language: 'uk' })` |
 
 
 ### `count`
@@ -135,7 +135,7 @@ console.log(getFakeUser({count:2, gender: 'female'}))
 ```
 
 ### `language`
-With the `language` setting, you can choose in which language fields such as `firstName` and `lastName`. By default `language=en`. Supported languages: English, Ukrainian, Russian. To select a language, enter it in the following format `language: 'en'` or `language: 'uk'` or `language: 'ru'`.
+With the `language` setting, you can choose in which language fields such as `firstName` and `lastName`. By default `language=en`. Supported languages: English, Ukrainian, Russian. To select a language, enter it in the following format `language: 'en'` or `language: 'es'` or `language: 'uk'` or `language: 'ru'`.
 `language: 'en'` is optional, as it is the default.
 ```javascript
 const getfakeUser = require('get-fake-user')

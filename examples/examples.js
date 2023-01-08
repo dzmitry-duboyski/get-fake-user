@@ -29,3 +29,7 @@ console.log('\n')
 console.log("Fifth example - getFakeUser({language: 'uk'}) :")
 console.log(getFakeUser({language: 'uk'}))
 console.log('\n')
+
+console.log("Fifth example - getFakeUser({language: 'es'}) :")
+console.log(getFakeUser({language: 'es', count: 1}))
+console.log('\n')

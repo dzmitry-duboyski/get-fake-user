@@ -4,7 +4,7 @@
   "description": "Random user generation including the following data firstName, lastName, gender, nickname, emailAddres, password.",
   "main": "index.js",
   "scripts": {
-    "example": "node ./example/example.js"
+    "example": "node ./examples/examples.js"
   },
   "repository": {
     "type": "git",
