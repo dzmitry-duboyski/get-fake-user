@@ -10,26 +10,26 @@ const getFakeUser = require('../index')
 // }
 
 
-console.log("First example - getFakeUser() :")
+console.log("Example #1 - getFakeUser() :")
 console.log(getFakeUser())
 console.log('\n')
 
-console.log("Second example - getFakeUser({count: 3, gender: 'male'}) :")
+console.log("Example #2 - getFakeUser({count: 3, gender: 'male'}) :")
 console.log(getFakeUser({count: 3, gender: 'male'}))
 console.log('\n')
 
-console.log("Third example - getFakeUser({count: 1, language: 'en'}) :")
+console.log("Example #3 - getFakeUser({count: 1, language: 'en'}) :")
 console.log(getFakeUser({count: 1, language: 'en'}))
 console.log('\n')
 
-console.log("Fourth example - getFakeUser({language: 'ru'}) :")
+console.log("Example #4 - getFakeUser({language: 'ru'}) :")
 console.log(getFakeUser({language: 'ru'}))
 console.log('\n')
 
-console.log("Fifth example - getFakeUser({language: 'uk'}) :")
+console.log("Example #5 - getFakeUser({language: 'uk'}) :")
 console.log(getFakeUser({language: 'uk'}))
 console.log('\n')
 
-console.log("Fifth example - getFakeUser({language: 'es'}) :")
+console.log("Example #6 - getFakeUser({language: 'es'}) :")
 console.log(getFakeUser({language: 'es', count: 1}))
 console.log('\n')
