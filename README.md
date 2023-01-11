@@ -59,7 +59,7 @@ You can specify additional options to customize the created users.
 | --- | --- | --- | --- |
 | `count` | Number of users. | `1` | `getFakeUser({ count:10 })` |
 | `gender` | Gender of users.<br/><br/>**Supported values:**  `male`, `female`, `mix`.<br/><br/>`male` - created users will be male<br/>`female` - created users will be female <br/>`mix` - created users will be of random sex (`male` or `female`) | `mix` | `getFakeUser({ gender: 'female' })` |
-| `language` | Supported languages: English, Ukrainian, Russian. the specified language only affects the `firstName` and `lastName` fields.<br/><br/>**Supported values:** `en`,`es`, `uk`, `ru`.<br/><br/>`en` - English<br/>`es` - Spanish<br/>`uk` - Ukrainian<br/>`ru` - Russian | `en` | `getFakeUser({ language: 'uk' })` |
+| `language` | Supported languages: English, Spanish, Ukrainian, Russian. the specified language only affects the `firstName` and `lastName` fields.<br/><br/>**Supported values:** `en`,`es`, `uk`, `ru`.<br/><br/>`en` - English<br/>`es` - Spanish<br/>`uk` - Ukrainian<br/>`ru` - Russian | `en` | `getFakeUser({ language: 'uk' })` |
 
 
 ### `count`
