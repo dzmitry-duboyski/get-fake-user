@@ -106,7 +106,7 @@ console.log(getFakeUser({count:3}))
 When creating a user, you can specify the required gender for users using the `gender` parameter.  Use the following values `male`, `female`, `mix`. The `mix` parameter can be omitted, it is set by default if the `gender` parameter is missing. Thus, if the `gender` parameter is not manually specified by you, then the gender of the users will be randomly selected.
 
 ```javascript
-const getfakeUser = require('get-fake-user')
+const getFakeUser = require('get-fake-user')
 
 console.log(getFakeUser({count:2, gender: 'female'}))
 ```
@@ -138,7 +138,7 @@ console.log(getFakeUser({count:2, gender: 'female'}))
 With the `language` setting, you can choose in which language fields such as `firstName` and `lastName`. By default `language=en`. Supported languages: English, Ukrainian, Russian. To select a language, enter it in the following format `language: 'en'` or `language: 'es'` or `language: 'uk'` or `language: 'ru'`.
 `language: 'en'` is optional, as it is the default.
 ```javascript
-const getfakeUser = require('get-fake-user')
+const getFakeUser = require('get-fake-user')
 
 console.log(getFakeUser({language: 'ru'}))
 ```
