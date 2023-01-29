@@ -2,7 +2,7 @@
  <img src="https://user-images.githubusercontent.com/38065632/187552707-895d9211-0a38-4ad7-817c-9fd3c6c556ec.png">
 </p>
 
-![downloads](https://img.shields.io/npm/dt/get-fake-user) ![](https://img.shields.io/npm/v/get-fake-user) ![](https://img.shields.io/npm/l/get-fake-user) ![](https://img.shields.io/github/last-commit/dzmitry-duboyski/get-fake-user) ![](https://img.shields.io/github/stars/dzmitry-duboyski/get-fake-user?style=social)
+![downloads](https://img.shields.io/npm/dt/get-fake-user) ![](https://img.shields.io/npm/v/get-fake-user) ![](https://img.shields.io/npm/l/get-fake-user) ![](https://img.shields.io/github/last-commit/dzmitry-duboyski/get-fake-user) ![](https://img.shields.io/github/stars/dzmitry-duboyski/get-fake-user?style=social) [![run on repl.it](https://img.shields.io/badge/Run_on_Replit-f26207?logo=replit&logoColor=white)](https://replit.com/@dzmitry-duboysk/get-fake-user)
 
 ---
 ## Description
