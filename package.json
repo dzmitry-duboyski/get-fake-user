@@ -11,12 +11,18 @@
     "url": "git+https://github.com/dzmitry-duboyski/get-fake-user.git"
   },
   "keywords": [
-    "fake",
+    "user generator",
+    "fake users",
+    "fake person",
+    "dummy user",
+    "automation",
     "random",
     "user",
+    "users",
     "testing",
     "create",
-    "users"
+    "user-data",
+    "registration"
   ],
   "author": "Dima Dub",
   "license": "MIT",
