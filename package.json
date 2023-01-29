@@ -1,6 +1,6 @@
 {
   "name": "get-fake-user",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Random user generation including the following data firstName, lastName, gender, nickname, emailAddres, password.",
   "main": "index.js",
   "scripts": {
