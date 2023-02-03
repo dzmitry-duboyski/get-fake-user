@@ -95,16 +95,39 @@ const getRandomeUser = (settings) => {
 }
 
 /**
- * Creating the required number of users.
+ * ### The user generating function generates a user according to the specified settings.
  * 
- * @settings {Object} settings - An object containing settings for creating users. 
- * settings.count - how many users need to be created, default value "1".
- * settings.gender - gender of created users ("male","female","mix"), default value "mix".
- * settings.language - language for first and last name, default value "en".
+ * @param {{count, gender, language}} settings - An object containing settings for creating users. 
+ * @param {number} settings.count - The count of users. Default value "1".
+ * @param {string} settings.gender - Gender of created users ("male","female","mix"), default value "mix".
+ * @param {string} settings.language - Language for first and last name, default value "`en`".
  * 
  * @returns {Object|Array} If a single user is created, it will be returned as an object.
  * If you need to create multiple users, an array containing objects with users will be returned.
  * 
+ * @example
+ * const users = getFakeUser({count: 2, language: 'es', gender: 'female'})
+ * console.log(users)
+ * 
+ * // console output:
+ * [
+ *   {
+ *     firstName: 'Cristina',
+ *     lastName: 'Fernández',
+ *     gender: 'female',
+ *     nickname: 'super862349',
+ *     emailAddress: 'cristina.fernandez@aol.com',
+ *     password: 'Cristina@7358326'
+ *   },
+ *   {
+ *     firstName: 'Harper',
+ *     lastName: 'Álvarez',
+ *     gender: 'female',
+ *     nickname: 'puper2879034',
+ *     emailAddress: 'harper.alvarez@gmail.com',
+ *     password: 'Harper$4756566'
+ *   }
+ * ]
  */
 const getRandomeUsers = (settings = defaultSettings) => {
   let users = []
