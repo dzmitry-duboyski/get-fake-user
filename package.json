@@ -1,7 +1,7 @@
 {
   "name": "get-fake-user",
-  "version": "2.3.1",
-  "description": "Random user generation including the following data firstName, lastName, gender, nickname, emailAddres, password.",
+  "version": "2.3.2",
+  "description": "Random user generation including the following data firstName, lastName, gender, nickname, emailAddres, password, birthdate.",
   "main": "index.js",
   "scripts": {
     "example": "node ./examples/examples.js"
@@ -22,7 +22,14 @@
     "testing",
     "create",
     "user-data",
-    "registration"
+    "registration",
+    "firstName",
+    "lastName",
+    "gender",
+    "nickname",
+    "emailAddres",
+    "password",
+    "birthdate"
   ],
   "author": "Dima Dub",
   "license": "MIT",
