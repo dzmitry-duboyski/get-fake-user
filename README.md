@@ -44,10 +44,8 @@ npm install get-fake-user
 
 ```javascript
 const getFakeUser = require('get-fake-user')
-
 console.log(getFakeUser())
-```
-```javascript
+
 // console output
 {
   firstName: 'Alfie',
@@ -83,11 +81,8 @@ To get multiple users, when calling `getFakeUser()` specify an object with the `
 
 ```javascript
 const getFakeUser = require('get-fake-user')
-
 console.log(getFakeUser({count:3}))
-```
 
-```javascript
 // console output
 [
   {
@@ -142,12 +137,8 @@ When creating a user, you can specify the required gender for users using the `g
 
 ```javascript
 const getFakeUser = require('get-fake-user')
-
 console.log(getFakeUser({count:2, gender: 'female'}))
-```
 
-
-```javascript
 // console output
 [
   {
@@ -188,10 +179,8 @@ With the `language` setting, you can choose in which language fields such as `fi
 `language: 'en'` is optional, as it is the default.
 ```javascript
 const getFakeUser = require('get-fake-user')
-
 console.log(getFakeUser({language: 'ru'}))
-```
-```javascript
+
 // console output
 [
   {
