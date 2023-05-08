@@ -23,7 +23,14 @@ Example of an exported data(one user):
   gender: 'male',
   nickname: 'strong9173452',
   emailAddress: 'alfie.macey5713177@yahoo.com',
-  password: 'Alfie$5009314'
+  password: 'Alfie$5009314',
+  birthdate: {
+      monthNumber: 7,
+      monthName: 'July',
+      dayNumber: 15,
+      yearNumber: 1972,
+      fullDateString: '1972-07-15'
+    }
 }
 ```
 
@@ -48,7 +55,14 @@ console.log(getFakeUser())
   gender: 'male',
   nickname: 'strong9173452',
   emailAddress: 'alfie.macey5713177@yahoo.com',
-  password: 'Alfie$5009314'
+  password: 'Alfie$5009314',
+  birthdate: {
+      monthNumber: 12,
+      monthName: 'December',
+      dayNumber: 5,
+      yearNumber: 1967,
+      fullDateString: '1967-12-05'
+    }
 }
 ```
 ## Additional parameters
@@ -82,7 +96,14 @@ console.log(getFakeUser({count:3}))
     gender: 'male',
     nickname: 'fast746322',
     emailAddress: 'brian.bargeman6495334@aol.com',
-    password: 'Brian#602241'
+    password: 'Brian#602241',
+    birthdate: {
+      monthNumber: 3,
+      monthName: 'March',
+      dayNumber: 18,
+      yearNumber: 1994,
+      fullDateString: '1994-03-18'
+    }
   },
   {
     firstName: 'Terence',
@@ -90,7 +111,14 @@ console.log(getFakeUser({count:3}))
     gender: 'male',
     nickname: 'sweetie4996015',
     emailAddress: 'terence.birch9865994@gmail.com',
-    password: 'Terence@2515067'
+    password: 'Terence@2515067',
+    birthdate: {
+      monthNumber: 10,
+      monthName: 'October',
+      dayNumber: 19,
+      yearNumber: 1962,
+      fullDateString: '1962-10-19'
+    }
   },
   {
     firstName: 'Cheryl',
@@ -98,7 +126,14 @@ console.log(getFakeUser({count:3}))
     gender: 'female',
     nickname: 'fast9219228',
     emailAddress: 'cheryl.samuels7309146@yahoo.com',
-    password: 'Cheryl$7425514'
+    password: 'Cheryl$7425514',
+    birthdate: {
+      monthNumber: 2,
+      monthName: 'February',
+      dayNumber: 17,
+      yearNumber: 1961,
+      fullDateString: '1961-02-17'
+    }
   }
 ]
 ```
@@ -121,7 +156,14 @@ console.log(getFakeUser({count:2, gender: 'female'}))
     gender: 'female',
     nickname: 'hot2586687',
     emailAddress: 'whitney.gustman9004751@gmail.com',
-    password: 'Whitney)5540391'
+    password: 'Whitney)5540391',
+    birthdate: {
+      monthNumber: 11,
+      monthName: 'November',
+      dayNumber: 8,
+      yearNumber: 1990,
+      fullDateString: '1990-11-08'
+    }
   },
   {
     firstName: 'Carol',
@@ -129,7 +171,14 @@ console.log(getFakeUser({count:2, gender: 'female'}))
     gender: 'female',
     nickname: 'lazy3778840',
     emailAddress: 'carol.sykes9959462@gmail.com',
-    password: 'Carol$7241265'
+    password: 'Carol$7241265',
+    birthdate: {
+      monthNumber: 11,
+      monthName: 'November',
+      dayNumber: 4,
+      yearNumber: 1991,
+      fullDateString: '1991-11-04'
+    }
   }
 ]
 ```
@@ -151,7 +200,14 @@ console.log(getFakeUser({language: 'ru'}))
     gender: 'male',
     nickname: 'strong3297577',
     emailAddress: 'vladislav.vinogradov@aol.com',
-    password: 'Vladislav#6393212'
+    password: 'Vladislav#6393212',
+    birthdate: {
+      monthNumber: 1,
+      monthName: 'January',
+      dayNumber: 3,
+      yearNumber: 1971,
+      fullDateString: '1971-01-03'
+    }
   }
 ]
 ```
