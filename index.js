@@ -1,6 +1,7 @@
 const { getRandomElement, getRandomNumber, getData, checkSettings, getRandomGender } = require('./utils')
 const defaultSettings = require('./getDefaultSettings')()
 const { getTranslite } = require('./getTranslite')
+const { getBirthdate } = require('./getBirthdate')
 
 /**
  * Getting one random user
@@ -26,6 +27,7 @@ const getRandomeUser = (settings) => {
   let emailName
   let emailAddress
   let password
+  let birthdate
 
   const getMaleData = () => {
     firstName = getRandomElement(data.male.firstNameArray)
@@ -82,6 +84,8 @@ const getRandomeUser = (settings) => {
     password = `${getTranslite(firstName, transliteOptions)}${getRandomElement(data.common.specialSymbolsArray)}${getRandomNumber()}`
   }
 
+  birthdate = getBirthdate()
+
   const randomeUser = {
     firstName: firstName,
     lastName: lastName,
@@ -89,6 +93,7 @@ const getRandomeUser = (settings) => {
     nickname: nickname,
     emailAddress: emailAddress,
     password: password,
+    birthdate: birthdate
   }
   
   return randomeUser
