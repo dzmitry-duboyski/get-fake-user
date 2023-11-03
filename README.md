@@ -4,10 +4,10 @@
 
 ![downloads](https://img.shields.io/npm/dt/get-fake-user) ![](https://img.shields.io/npm/v/get-fake-user) ![](https://img.shields.io/npm/l/get-fake-user) ![](https://img.shields.io/github/last-commit/dzmitry-duboyski/get-fake-user) ![](https://img.shields.io/github/stars/dzmitry-duboyski/get-fake-user?style=social) [![run on repl.it](https://img.shields.io/badge/Run_on_Replit-f26207?logo=replit&logoColor=white)](https://replit.com/@dzmitry-duboysk/get-fake-user)
 
----
+# Random user generator
+
 ## Description
-Random user generator.
-If you need to automate the registration process for example, you need to create user data, in which case this package will help you.
+Random user generation including the following data firstName, lastName, nickname, emailAddres, password, birthdate, gender. If you need to automate the registration process for example, you need to create user data, in which case this package will help you.
 
 ## How it works
 The `/data` folder contains a set of random data that includes first names, last names, and other data. A random first and last name is taken from files in this folder, and an email and password are generated based on them. The generated data is exported as an object in array.
@@ -67,11 +67,11 @@ console.log(getFakeUser())
 
 You can specify additional options to customize the created users.
 
-| Name | Description | Default value | Examples |
-| --- | --- | --- | --- |
-| `count` | Number of users. | `1` | `getFakeUser({ count:10 })` |
-| `gender` | Gender of users.<br/><br/>**Supported values:**  `male`, `female`, `mix`.<br/><br/>`male` - created users will be male<br/>`female` - created users will be female <br/>`mix` - created users will be of random sex (`male` or `female`) | `mix` | `getFakeUser({ gender: 'female' })` |
-| `language` | Supported languages: English, Spanish, Ukrainian, Russian. the specified language only affects the `firstName` and `lastName` fields.<br/><br/>**Supported values:** `en`,`es`, `uk`, `ru`.<br/><br/>`en` - English<br/>`es` - Spanish<br/>`uk` - Ukrainian<br/>`ru` - Russian | `en` | `getFakeUser({ language: 'uk' })` |
+| Name       | Default value | Description      | Examples                    |
+| ---------- | ------------- | ---------------- | --------------------------- |
+| `count`    | `1`           | Number of users. | `getFakeUser({ count:10 })` |
+| `gender`   | `mix`         |Gender of users.<br/><br/>**Supported values:**  `male`, `female`, `mix`.<br/><br/>`male` - created users will be male<br/>`female` - created users will be female <br/>`mix` - created users will be of random sex (`male` or `female`) | `getFakeUser({ gender: 'female' })` |
+| `language` | `en`          | Supported languages: English, Spanish, Ukrainian, Russian. the specified language only affects the `firstName` and `lastName` fields.<br/><br/>**Supported values:** `en`,`es`, `uk`, `ru`.<br/><br/>`en` - English<br/>`es` - Spanish<br/>`uk` - Ukrainian<br/>`ru` - Russian |  `getFakeUser({ language: 'uk' })` |
 
 
 ### `count`
